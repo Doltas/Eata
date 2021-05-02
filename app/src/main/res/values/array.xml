@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="class_year">
+        <item>2021학번</item>
+        <item>2020학번</item>
+        <item>2019학번</item>
+        <item>2018학번</item>
+        <item>2017학번</item>
+        <item>2016학번</item>
+        <item>2015학번</item>
+        <item>2014학번</item>
+        <item>2013학번</item>
+        <item>2012학번</item>
+        <item>2011학번</item>
+        <item>2010학번</item>
+    </string-array>
+</resources>

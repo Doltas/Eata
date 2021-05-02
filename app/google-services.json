@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "219308297784",
+    "project_id": "eata-412a8",
+    "storage_bucket": "eata-412a8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:219308297784:android:21b8e6fcf42f6c5ef460cd",
+        "android_client_info": {
+          "package_name": "com.example.eata"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "219308297784-uus7ol7hr5v4nsunqjbskgcgunau057f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.eata",
+            "certificate_hash": "81d74e10b195238c06a587ad5bd4ef18df477d55"
+          }
+        },
+        {
+          "client_id": "219308297784-egv783kv7u17gne0eq34aj8h72n405uv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDathCeewGp1ktUDCItBOQtR4wyFTn6yRQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "219308297784-egv783kv7u17gne0eq34aj8h72n405uv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
