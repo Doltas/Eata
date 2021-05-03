@@ -1,5 +1,6 @@
 package com.example.eata
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.eata.databinding.ActivityLoginBinding
@@ -17,6 +18,11 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
         mBinding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.loginTvReg.setOnClickListener {
+            val intent = Intent(this,RegisterActivity::class.java)
+            startActivity(intent)
+        }
 
 
 
