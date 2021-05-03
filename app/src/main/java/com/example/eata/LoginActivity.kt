@@ -3,6 +3,7 @@ package com.example.eata
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.example.eata.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
