@@ -1,5 +1,6 @@
 package com.example.eata
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.eata.databinding.ActivityMainBinding
@@ -15,8 +16,19 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         mBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-    }
 
+        val intent = intent
+
+        val userID= intent.getStringExtra("userID")
+        val userPass = intent.getStringExtra("userPass")
+
+        binding.tvId.text = userID
+        binding.tvPw.text = userPass
+//        binding.tvId.text = intent.getStringExtra("userID")
+//        binding.tvPw.text = intent.getStringExtra("userPass")
+
+
+    }
 
     // 액티비티가 파괴될 때..
     override fun onDestroy() {
