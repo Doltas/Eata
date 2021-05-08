@@ -19,7 +19,7 @@ class RegisterActivity : AppCompatActivity() {
         mBinding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val spinner: Spinner = binding.regSpinner
+        val spinner: Spinner = binding.spYear
         val tvresult: TextView = binding.result
         val cyear: Array<String> = resources.getStringArray(R.array.class_year)
 
