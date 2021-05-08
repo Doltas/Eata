@@ -21,7 +21,7 @@ class SignupActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-         binding.reg2Btn.setOnClickListener(View.OnClickListener {
+         binding.signupBtn.setOnClickListener(View.OnClickListener {
              //회원가입 처리 시작
 
          })
