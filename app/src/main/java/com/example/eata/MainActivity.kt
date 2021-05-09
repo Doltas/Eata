@@ -21,9 +21,14 @@ class MainActivity : AppCompatActivity() {
 
         val userID= intent.getStringExtra("userID")
         val userPass = intent.getStringExtra("userPass")
+//        val userName = intent.getStringExtra("userName")
+//        val userEmail = intent.getStringExtra("userEmail")
+
 
         binding.tvId.text = userID
         binding.tvPw.text = userPass
+//        binding.tvUsername.text =  userName
+//        binding.tvAny.text = userEmail
 //        binding.tvId.text = intent.getStringExtra("userID")
 //        binding.tvPw.text = intent.getStringExtra("userPass")
 

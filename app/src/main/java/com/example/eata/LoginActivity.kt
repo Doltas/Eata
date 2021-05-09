@@ -29,7 +29,7 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        //회원가입 클릭시 회원가입창으로 이동
+        //회원가입 클릭시
         binding.tvReg.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
@@ -46,18 +46,25 @@ class LoginActivity : AppCompatActivity() {
                     try {
                         val jsonObject = JSONObject(response)
                         val success = jsonObject.getBoolean("success")
-                        if (success) { // 회원등록에 성공한 경우
+                        if (success) { // 로그인에 성공한 경우
                             val userID = jsonObject.getString("userID")
                             val userPass = jsonObject.getString("userPassword")
+//                            val userName = jsonObject.getString("userName")
+//                            val userEmail = jsonObject.getString("userEmail")
+                            //php파일 변경 X 필요하면 변경
+
 
                             Toast.makeText(applicationContext, "로그인에 성공하였습니다.", Toast.LENGTH_SHORT)
                                 .show()
                             val intent = Intent(this@LoginActivity, MainActivity::class.java)
                             intent.putExtra("userID", userID)
-                            intent.putExtra("userPassword", userPass)
+                            intent.putExtra("userPass", userPass)
+//                            intent.putExtra("userName",userName)
+//                            intent.putExtra("userEmail",userEmail)
+
 
                             startActivity(intent)
-                        } else { // 회원등록에 실패한 경우
+                        } else { // 로그인에 실패한 경우
                             Toast.makeText(
                                 applicationContext,
                                 "로그인에 실패하였습니다.",

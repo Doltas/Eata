@@ -29,18 +29,20 @@ class RegisterActivity : AppCompatActivity() {
 
         spinner.setAdapter(Myadapter)
 
-
+        //spinner 클릭시
         spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            //스피너 아이템이 선택될때
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 Toast.makeText(this@RegisterActivity, resources.getStringArray(R.array.class_year)[position], Toast.LENGTH_LONG)
                         .show()
                 tvresult.setText(cyear[position])
             }
-
+        // 암것도 선택 안될때
             override fun onNothingSelected(parent: AdapterView<*>?) {
             }
         }
-        //다음버튼 클릭시 Signup창으로 이동
+
+        //다음버튼 클릭시
         binding.nextBtn.setOnClickListener {
             val intent = Intent(this, SignupActivity::class.java)
             startActivity(intent)
