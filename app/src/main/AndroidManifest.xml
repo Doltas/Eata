@@ -10,8 +10,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Eata">
-        <activity android:name=".MainActivity"></activity>
+        android:theme="@style/Theme.Eata"
+        android:usesCleartextTraffic="true"> <!--홍드로이드가 넣으라고함 -->
+        <activity android:name=".MainActivity" />
         <activity android:name=".SignupActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity">

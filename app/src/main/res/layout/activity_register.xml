@@ -7,19 +7,30 @@
     tools:context=".RegisterActivity">
 
 
+    <ImageView
+        android:id="@+id/close_btn2"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/ic_baseline_clear_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="308dp"
-        android:layout_marginRight="308dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="252dp"
+        android:layout_marginRight="252dp"
         android:text="회원가입"
         android:textColor="#000000"
         android:textSize="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/close_btn2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -29,7 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="42dp"
+        android:layout_marginTop="44dp"
         android:layout_marginEnd="276dp"
         android:layout_marginRight="276dp"
         android:text="학교 선택"
@@ -44,21 +55,18 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="31dp"
-        android:layout_marginLeft="31dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="328dp"
-        android:layout_marginRight="328dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="40dp"
         android:text="입학년도"
         android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <androidx.appcompat.widget.AppCompatSpinner
         android:id="@+id/sp_year"
         android:layout_width="354dp"
-        android:layout_height="35dp"
+        android:layout_height="42dp"
 
         android:layout_marginStart="29dp"
         android:layout_marginLeft="29dp"
@@ -79,20 +87,23 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="16dp"
         android:text="학교"
         android:textColor="@color/black"
         android:textSize="16sp"
-        tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="286dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sp_year" />
 
     <EditText
         android:id="@+id/et_select"
         android:layout_width="355dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="28dp"
+        android:layout_height="42dp"
 
+        android:layout_marginStart="28dp"
         android:layout_marginLeft="28dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="13dp"
         android:layout_marginEnd="28dp"
         android:layout_marginRight="28dp"
         android:ems="10"
@@ -104,36 +115,29 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/next_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="35dp"
-        android:layout_marginStart="43dp"
-        android:layout_marginLeft="43dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="42dp"
-        android:layout_marginRight="42dp"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/small_round"
         android:backgroundTint="@color/red"
         android:paddingHorizontal="150dp"
         android:text="다음"
         android:textColor="@color/white"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/et_select"
+        app:layout_constraintStart_toStartOf="@+id/et_select"
         app:layout_constraintTop_toBottomOf="@+id/et_select" />
 
     <TextView
         android:id="@+id/result"
         android:layout_width="362dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="145dp"
-        android:layout_marginBottom="145dp"
+        android:layout_marginTop="30dp"
         android:text="값"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/next_btn" />
+        app:layout_constraintTop_toBottomOf="@+id/next_btn"
+        tools:visibility="visible" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
