@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="홈"
+        android:id="@+id/action_home"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_home_24">
+    </item>
+    <item
+        android:title="게시판"
+        android:id="@+id/action_board"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_message_24">
+    </item>
+    <item
+        android:title="시간표"
+        android:id="@+id/action_schedule"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_schedule_24">
+    </item>
+    <item
+        android:title="알림"
+        android:id="@+id/action_notification"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_notifications_24">
+    </item>
+    <item
+        android:title="캠퍼스픽"
+        android:id="@+id/action_campuspick"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_location_on_24">
+    </item>
+
+
+</menu>
