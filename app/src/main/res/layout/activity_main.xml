@@ -6,46 +6,113 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/tv_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="143dp"
-        android:layout_marginLeft="143dp"
-        android:layout_marginTop="200dp"
-        android:text="아이디"
-        android:textSize="36sp"
+<!--    <TextView-->
+<!--        android:id="@+id/tv_id"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="276dp"-->
+<!--        android:layout_marginLeft="276dp"-->
+<!--        android:layout_marginTop="492dp"-->
+<!--        android:text="아이디"-->
+<!--        android:textSize="36sp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        tools:visibility="gone" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_username"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="4dp"-->
+<!--        android:layout_marginLeft="4dp"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:text="이름"-->
+<!--        android:textSize="36sp"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/tv_pw"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tv_pw"-->
+<!--        tools:visibility="gone" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_any"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="4dp"-->
+<!--        android:layout_marginLeft="4dp"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:text="무언가"-->
+<!--        android:textSize="36sp"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/tv_username"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tv_username"-->
+<!--        tools:visibility="gone" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_pw"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_marginLeft="8dp"-->
+<!--        android:layout_marginTop="4dp"-->
+<!--        android:text="비번"-->
+<!--        android:textSize="36sp"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/tv_id"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tv_id"-->
+<!--        tools:visibility="gone" />-->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="#AAAAAA"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/tv_any"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="39dp"
-        android:text="무언가"
-        android:textSize="36sp"
-        app:layout_constraintStart_toStartOf="@+id/tv_username"
-        app:layout_constraintTop_toBottomOf="@+id/tv_username" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="툴바"
+            android:id="@+id/toolbar_main"
+            android:textColor="@android:color/white"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="18dp" />
 
-    <TextView
-        android:id="@+id/tv_username"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="63dp"
-        android:text="이름"
-        android:textSize="36sp"
-        app:layout_constraintStart_toStartOf="@+id/tv_pw"
-        app:layout_constraintTop_toBottomOf="@+id/tv_pw" />
+    </androidx.appcompat.widget.Toolbar>
 
-    <TextView
-        android:id="@+id/tv_pw"
-        android:layout_width="wrap_content"
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation_view">
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text="에브리타임"
+            android:textColor="@color/red"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_view"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:text="비번"
-        android:textSize="36sp"
-        app:layout_constraintStart_toStartOf="@+id/tv_id"
-        app:layout_constraintTop_toBottomOf="@+id/tv_id" />
+        app:itemIconTint="@drawable/bnv_tab_item_foreground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_navigation_main"
+        app:labelVisibilityMode="unlabeled">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
