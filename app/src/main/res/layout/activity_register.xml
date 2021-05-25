@@ -97,7 +97,7 @@
         app:layout_constraintTop_toBottomOf="@+id/sp_year" />
 
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/et_select"
+        android:id="@+id/et_school"
         android:layout_width="355dp"
         android:layout_height="42dp"
 
@@ -106,40 +106,39 @@
         android:layout_marginTop="13dp"
         android:layout_marginEnd="28dp"
         android:layout_marginRight="28dp"
+        android:background="@drawable/small_round"
         android:ems="10"
         android:hint="학교명"
         android:paddingHorizontal="10dp"
-        android:background="@drawable/small_round"
         android:privateImeOptions="defaultInputmode=korean"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/darker_gray"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="@+id/et_school"
+        app:layout_constraintStart_toStartOf="@+id/et_school"
+        app:layout_constraintTop_toBottomOf="@+id/et_school" />
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/next_btn"
         android:layout_width="0dp"
         android:layout_height="42dp"
-        android:layout_marginTop="20dp"
         android:background="@drawable/small_round"
         android:backgroundTint="@color/red"
         android:paddingHorizontal="150dp"
         android:text="다음"
         android:textColor="@color/white"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/et_select"
-        app:layout_constraintStart_toStartOf="@+id/et_select"
-        app:layout_constraintTop_toBottomOf="@+id/et_select" />
-
-    <TextView
-        android:id="@+id/result"
-        android:layout_width="362dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="값"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/next_btn"
-        tools:visibility="visible" />
+        app:layout_constraintEnd_toEndOf="@+id/rv"
+        app:layout_constraintStart_toStartOf="@+id/rv"
+        app:layout_constraintTop_toBottomOf="@+id/rv" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
