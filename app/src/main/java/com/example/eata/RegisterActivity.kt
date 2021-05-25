@@ -3,9 +3,12 @@ package com.example.eata
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.View
 import android.widget.*
 import com.example.eata.databinding.ActivityRegisterBinding
+import java.util.ArrayList
 
 class RegisterActivity : AppCompatActivity() {
     // 전역 변수로 바인딩 객체 선언
@@ -21,8 +24,8 @@ class RegisterActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val spinner: Spinner = binding.spYear
-        val tvresult: TextView = binding.result
         val cyear: Array<String> = resources.getStringArray(R.array.class_year)
+
 
         var Myadapter = ArrayAdapter(this,android.R.layout.simple_spinner_item, cyear)
         Myadapter.setDropDownViewResource(android.R.layout.select_dialog_singlechoice)
@@ -35,7 +38,6 @@ class RegisterActivity : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 Toast.makeText(this@RegisterActivity, resources.getStringArray(R.array.class_year)[position], Toast.LENGTH_LONG)
                         .show()
-                tvresult.setText(cyear[position])
             }
         // 암것도 선택 안될때
             override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -48,9 +50,28 @@ class RegisterActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.etSchool.addTextChangedListener(object: TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+
+
+
+            }
+        })
+
+
 
 
     }
+
+
 
     // 액티비티가 파괴될 때..
     override fun onDestroy() {
